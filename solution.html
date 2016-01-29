@@ -1,8 +1,13 @@
-<!--m-->
+<!--Add code into following file via ftp/cpanel: wp-content->themes->/theme currently in use/->header.php-->
+
+<!--Doctype, html, title, etc-->
+<!--wp_head should be already there-->
 <?php wp_head(); ?>
-<!--following script ensures that in kontakt form recapcha is required and therefore form is submitted successfully. Added 29.09.16-->
+<!--Following part you need to add. #field_1_5 depends on your form element id, get it by inspecting element (right click on 
+element). Class gfield_contains_required makes sure that element will be required even if ir won't have * next to it.-->
 <script type="text/javascript">
 jQuery(document).ready(function($) {
     $('#field_1_5').addClass('gfield_contains_required');
 });
 </script>
+<!--other scripts, end of head, etc-->
